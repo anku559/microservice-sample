@@ -50,3 +50,7 @@ func GetFullAddress(userAddress UserAddress) string {
 		userAddress.Country,
 		userAddress.Pincode)
 }
+
+func init() {
+	fmt.Println("========= Inside init (/utils/types/UserTypes.go) ========= ")
+}

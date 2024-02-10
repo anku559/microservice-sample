@@ -2,16 +2,25 @@ package main
 
 import (
 	"fmt"
+	"gateway/utils/constants"
 	UserTypes "gateway/utils/types"
 )
 
-func main() {
+func init() {
+	fmt.Println("========= Inside init (main.go:10) ========= ")
 
 	userAlex := UserTypes.User{
 		FirstName:  "Alex",
 		MiddleName: "Doe",
 		LastName:   "Jr.",
 	}
+
+	fmt.Printf("%+v\n", userAlex)
+	fmt.Printf("%s\n", UserTypes.GetFullName(userAlex))
+}
+
+func init() {
+	fmt.Println("========= Inside init (main.go:23) ========= ")
 
 	alexAddress := UserTypes.UserAddress{
 		AddressLine1: "House No. 123",
@@ -24,7 +33,10 @@ func main() {
 		Pincode:      "456001",
 	}
 
-	fmt.Printf("%+v\n", userAlex)
-	fmt.Printf("%s\n", UserTypes.GetFullName(userAlex))
 	fmt.Printf("%s\n", UserTypes.GetFullAddress(alexAddress))
+}
+
+func main() {
+	fmt.Println(constants.DaysArray[0])
+	fmt.Println("========= End ========= ")
 }
