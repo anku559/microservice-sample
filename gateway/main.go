@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	UserTypes "github/anku559/microservice-sample/gateway/utils/types"
+	UserTypes "gateway/utils/types"
 )
 
 func main() {

@@ -4,6 +4,6 @@
 
 mkdir gateway
 cd gateway
-go mod init github/anku559/microservice-sample/gateway
+go mod init gateway
 
 ```
