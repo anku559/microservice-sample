@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"gateway/helpers"
 	"gateway/utils/constants"
 	UserTypes "gateway/utils/types"
 )
@@ -39,4 +40,9 @@ func init() {
 func main() {
 	fmt.Println(constants.DaysArray[0])
 	fmt.Println("========= End ========= ")
+
+	testFilePath, _ := constants.JoinPaths("..", ".seeders", "test.txt")
+	text, _ := helpers.ReadTextFile(testFilePath)
+	fmt.Println(text)
+
 }
