@@ -45,4 +45,6 @@ func main() {
 	text, _ := helpers.ReadTextFile(testFilePath)
 	fmt.Println(text)
 
+	writeToFile, _ := constants.JoinPaths("..", ".seeders", "newFile.txt")
+	helpers.WriteTextFile(writeToFile, "HELLO WORLD")
 }

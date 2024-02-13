@@ -11,5 +11,9 @@ func ReadTextFile(filename string) (string, error) {
 		return "", err
 	}
 	return string(content), nil
+}
 
+func WriteTextFile(fileName string, content string) error {
+	err := os.WriteFile(fileName, []byte(content), 0644)
+	return err
 }
