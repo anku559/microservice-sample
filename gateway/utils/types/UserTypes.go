@@ -54,3 +54,15 @@ func GetFullAddress(userAddress UserAddress) string {
 func init() {
 	fmt.Println("========= Inside init (/utils/types/UserTypes.go) ========= ")
 }
+
+// New User Factory
+func NewUser(firstName, middleName, lastName, email, username, countryCode, phone string) User {
+	return User{
+		FirstName:   firstName,
+		MiddleName:  middleName,
+		LastName:    lastName,
+		Email:       email,
+		Username:    username,
+		CountryCode: countryCode,
+		Phone:       phone}
+}

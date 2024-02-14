@@ -125,6 +125,7 @@ dist
 
 # Docusaurus cache and generated files
 .docusaurus
+.seeders
 
 # Serverless directories
 .serverless/
